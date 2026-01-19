@@ -1,0 +1,17 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main circle background -->
+  <circle cx="16" cy="16" r="15" fill="#050000" stroke="#000" stroke-width="2"/>
+  
+  <!-- Central 't' character -->
+  <path d="M12.5 9.5C12.5 15.5 12.5 14 12.5 18.5C12.5 19.2 12.6 19.6 12.8 19.8C13.1 20.1 13.6 20.2 14.3 20.2C14.9 20.2 15.7 20.1 16.8 19.9L17.3 22.8C15.2 23.1 13.3 23.3 11.7 23.3C10.1 23.3 9 23.1 8.2 22.7C7.4 22.3 6.8 21.7 6.5 20.9C6.2 20.1 6 18.9 6 17.2V15.8H3.5V12.5H6V8.5L12.5 6.5V12.5H17V15.8H12.5V9.5Z" fill="#FFF212" stroke="#000" stroke-width="0.5"/>
+  
+  <!-- Small decorative circles -->
+  <circle cx="16" cy="4" r="2" fill="#000"/>
+  <circle cx="26" cy="8" r="1.5" fill="#000"/>
+  <circle cx="28" cy="16" r="1.5" fill="#000"/>
+  <circle cx="26" cy="24" r="1.5" fill="#000"/>
+  <circle cx="16" cy="28" r="1.5" fill="#000"/>
+  <circle cx="6" cy="24" r="1.5" fill="#000"/>
+  <circle cx="4" cy="16" r="1.5" fill="#000"/>
+  <circle cx="6" cy="8" r="1.5" fill="#000"/>
+</svg> 

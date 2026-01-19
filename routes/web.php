@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ApplyController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BlogCommentController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SponsorshipController;
 use Illuminate\Support\Facades\Route;
 
 // Public Routes
@@ -13,6 +15,16 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/contact', [ContactController::class, 'show'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::get('/programs', function () {
+    return view('programs');
+})->name('programs');
+Route::get('/partners', function () {
+    return view('partners');
+})->name('partners');
+Route::get('/sponsorship', [SponsorshipController::class, 'index'])->name('sponsorship');
+Route::post('/sponsorship', [SponsorshipController::class, 'store'])->name('sponsorship.store');
+Route::get('/apply', [ApplyController::class, 'index'])->name('apply');
+Route::post('/apply', [ApplyController::class, 'store'])->name('apply.store');
 
 // Blog Routes
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');

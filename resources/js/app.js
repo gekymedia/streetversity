@@ -1,4 +1,5 @@
 import './bootstrap';
+import './counter-animation';
 
 import Alpine from 'alpinejs';
 

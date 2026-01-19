@@ -1,207 +1,224 @@
 @extends('layouts.app')
 
-@section('title', 'About Streetversity - Free Training Hub')
-@section('description', 'Learn about Streetversity mission to provide free community training and skill development opportunities for everyone.')
+@section('title', 'About - Streetversity')
+@section('description', 'Learn about Streetversity\'s mission, vision, and the story behind our transformative African product design institute.')
+
+@push('styles')
+<style>
+    .bg-gray {
+        background-color: #f3f3f3;
+    }
+    .bg-dark {
+        background-color: #191a23;
+    }
+    .bg-primary {
+        background-color: hsl(60, 93%, 52%);
+    }
+    .bg-highlight {
+        background-color: #b7e918;
+    }
+    .text-primary {
+        color: hsl(60, 93%, 52%);
+    }
+    .text-dark {
+        color: #191a23;
+    }
+    .text-muted-foreground {
+        color: hsl(240, 3.8%, 46.1%);
+    }
+</style>
+@endpush
 
 @section('content')
+<div class="flex flex-col w-full">
     <!-- Hero Section -->
-    <section class="gold-gradient text-black py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight fade-in-up">
-                About Streetversity
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-800 max-w-3xl mx-auto leading-relaxed fade-in-up">
-                Empowering communities through accessible education and skill development
-            </p>
-        </div>
-    </section>
-
-    <!-- Mission Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="fade-in-up">
-                    <h2 class="text-3xl md:text-4xl font-bold text-black mb-6">
-                        Our Mission
-                    </h2>
-                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                        At Streetversity, we believe that education should be accessible to everyone, 
-                        regardless of their background or financial situation. We're committed to 
-                        breaking down barriers to learning and creating opportunities for personal 
-                        and professional growth.
+    <section class="bg-gray py-16 md:py-24 w-full">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+                <div class="space-y-4">
+                    <span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium bg-highlight text-dark">
+                        Our Story
+                    </span>
+                    <h1 class="text-4xl md:text-5xl font-bold tracking-tighter">Transforming African Design Education</h1>
+                    <p class="text-lg text-muted-foreground max-w-[600px]">
+                        Founded with a vision to bridge the gap between street-level creativity and world-class design
+                        education, Streetversity is empowering the next generation of African product designers.
                     </p>
-                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        Our platform brings together passionate educators, industry experts, and 
-                        curious learners in a collaborative environment where knowledge is shared 
-                        freely and skills are developed collectively.
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <div class="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-lg font-medium border border-yellow-200">
-                            Free Access
-                        </div>
-                        <div class="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-lg font-medium border border-yellow-200">
-                            Community First
-                        </div>
-                        <div class="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-lg font-medium border border-yellow-200">
-                            Quality Education
-                        </div>
-                    </div>
                 </div>
-                <div class="fade-in-up" style="animation-delay: 0.2s">
-                    <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl p-8 h-96 flex items-center justify-center border border-yellow-200">
-                        <svg class="w-48 h-48 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 14l9-5-9-5-9 5 9 5zm0 0l9-5m-9 5v9"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 18v4"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M7 15v4a2 2 0 002 2h6a2 2 0 002-2v-4"></path>
-                        </svg>
-                    </div>
+                <div class="relative h-[400px]">
+                    <img
+                        src="{{ asset('images/street3.jpg') }}"
+                        alt="Streetversity campus"
+                        class="object-cover rounded-lg w-full h-full"
+                    >
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Values Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-black mb-4">
-                    Our Values
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    The principles that guide everything we do at Streetversity
+    <!-- Founder's Story -->
+    <section class="py-16 md:py-24 bg-white w-full">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+                <div class="order-2 lg:order-1 relative h-[400px]">
+                    <img
+                        src="{{ asset('images/founder1.jpg') }}"
+                        alt="Anthony Yevugah, Founder of Streetversity"
+                        class="object-cover rounded-lg w-full h-full"
+                    >
+                </div>
+                <div class="order-1 lg:order-2 space-y-6">
+                    <span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium bg-highlight text-dark">
+                        Founder's Story
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold">Anthony Yevugah</h2>
+                    <p class="text-lg text-muted-foreground">
+                        Anthony Yevugah founded Streetversity in 2022 with a bold vision: to transform product design education in Africa by
+                        combining traditional craftsmanship with modern design principles.
+                    </p>
+                    <p class="text-lg text-muted-foreground">
+                        Streetversity was born out of <a href="https://tkinnovate.com" target="_blank" rel="noopener noreferrer" class="text-dark underline font-bold">TK Innovate</a>, a premier design and fabrication studio founded by Anthony in 2015. After years of success with TK Innovate, Anthony recognized the need to formalize the training of young talent who showed immense potential but lacked structured education.
+                    </p>
+                    <p class="text-lg text-muted-foreground">
+                        Growing up in Ghana, Anthony witnessed firsthand the incredible creativity and resourcefulness of local
+                        artisans who lacked formal training. This inspired him to create an educational institute that would
+                        harness this raw talent and provide the technical skills needed to compete in the global design market.
+                    </p>
+                    <p class="text-lg text-muted-foreground">
+                        With a background in industrial design and education, Anthony has built Streetversity into a beacon of
+                        innovation and empowerment for young African designers, leveraging the industry expertise and connections established through <a href="https://tkinnovate.com" target="_blank" rel="noopener noreferrer" class="text-dark underline font-bold">TK Innovate</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-16 md:py-32 bg-white w-full relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 left-10 w-64 h-64 border-2 border-primary rounded-full"></div>
+            <div class="absolute bottom-20 right-10 w-48 h-48 border-2 border-highlight rounded-full"></div>
+            <div class="absolute top-1/2 left-1/3 w-32 h-32 bg-primary/10 rounded-full blur-xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 md:px-6 relative z-10">
+            <div class="text-center space-y-6 mb-16">
+                <span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium bg-highlight text-dark">
+                    Our Purpose
+                </span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">Mission, Vision & Values</h2>
+                <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                    The guiding principles that drive everything we do at Streetversity
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Value 1 -->
-                <div class="bg-white border border-gold rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6 border border-yellow-200">
-                        <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-                        </svg>
+            <div class="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                @php
+                $items = [
+                    [
+                        'title' => 'Mission',
+                        'description' => 'To transform African product design education by combining street-level creativity with world-class design principles, creating pathways to sustainable careers for underserved youth.',
+                        'emoji' => '🚀',
+                        'gradient' => 'from-blue-500/20 to-purple-500/20',
+                    ],
+                    [
+                        'title' => 'Vision',
+                        'description' => 'To be the leading design institute in Africa, recognized globally for our innovative approach to design education and the exceptional quality of our graduates.',
+                        'emoji' => '🔭',
+                        'gradient' => 'from-pink-500/20 to-red-500/20',
+                    ],
+                    [
+                        'title' => 'Core Values',
+                        'description' => 'Our foundation is built on innovation, inclusivity, excellence, community, and sustainability.',
+                        'emoji' => '💎',
+                        'gradient' => 'from-green-500/20 to-teal-500/20',
+                    ],
+                ];
+                @endphp
+                @foreach($items as $index => $item)
+                <div class="group relative">
+                    <div class="absolute inset-0 bg-gradient-to-br {{ $item['gradient'] }} group-hover:opacity-100 opacity-0 rounded-2xl transition-all duration-500 blur-xl"></div>
+                    <div class="relative bg-white/80 backdrop-blur-sm border border-gray-100 rounded-2xl p-8 h-full transition-all duration-500 group-hover:transform group-hover:scale-105 group-hover:shadow-2xl group-hover:border-primary/20">
+                        <div class="space-y-6">
+                            <div class="relative">
+                                <div class="text-6xl mb-4 inline-block">{{ $item['emoji'] }}</div>
+                                <div class="absolute -top-2 -right-2 w-4 h-4 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+                            <div class="space-y-4">
+                                <h3 class="text-2xl font-bold text-gray-900 transition-colors duration-300">
+                                    {{ $item['title'] }}
+                                </h3>
+                                <p class="text-lg text-muted-foreground">{{ $item['description'] }}</p>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-black mb-4">Accessibility</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        We believe education should be free and accessible to all. No barriers, 
-                        no prerequisites - just pure learning opportunities for everyone.
-                    </p>
                 </div>
-
-                <!-- Value 2 -->
-                <div class="bg-white border border-gold rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6 border border-yellow-200">
-                        <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-black mb-4">Community</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Learning is better together. We foster a supportive community where 
-                        members help each other grow and succeed through collaboration.
-                    </p>
-                </div>
-
-                <!-- Value 3 -->
-                <div class="bg-white border border-gold rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6 border border-yellow-200">
-                        <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-black mb-4">Growth</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        We're committed to continuous improvement and innovation in education. 
-                        Our platform evolves with the needs of our community.
-                    </p>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
 
-    <!-- Story Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-black mb-4">
-                    Our Story
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    How Streetversity began and where we're headed
+    <!-- Photo Gallery -->
+    <section class="py-16 md:py-24 bg-gray w-full">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center space-y-4 mb-12">
+                <span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium bg-highlight text-dark">
+                    Our Work
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold">Streetversity in Action</h2>
+                <p class="text-lg text-muted-foreground max-w-[800px] mx-auto">
+                    See our students and instructors at work, creating and learning together.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="fade-in-up">
-                    <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl p-8 h-96 flex items-center justify-center border border-yellow-200">
-                        <svg class="w-48 h-48 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                        </svg>
-                    </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                @php
+                $galleryImages = [
+                    'women-tony.jpg',
+                    'metal.jpg',
+                    'street3.jpg',
+                    'metro.JPG',
+                    'student3.jpg',
+                    'instructor1.jpg',
+                    'student4.jpg',
+                    'instructor2.jpg',
+                ];
+                @endphp
+                @foreach($galleryImages as $index => $image)
+                <div class="relative h-[200px] md:h-[250px]">
+                    <img
+                        src="{{ asset('images/' . $image) }}"
+                        alt="Streetversity students and activities {{ $index + 1 }}"
+                        class="object-cover rounded-lg w-full h-full"
+                    >
                 </div>
-                <div class="fade-in-up" style="animation-delay: 0.2s">
-                    <h3 class="text-2xl font-bold text-black mb-6">From Idea to Impact</h3>
-                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                        Streetversity was born from a simple observation: many people have 
-                        valuable skills and knowledge to share, while many others are eager 
-                        to learn but lack access to quality education resources.
-                    </p>
-                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                        What started as a small community initiative has grown into a 
-                        comprehensive platform connecting learners with mentors, providing 
-                        free training materials, and fostering a culture of continuous learning.
-                    </p>
-                    <p class="text-lg text-gray-600 leading-relaxed">
-                        Today, we're proud to serve thousands of learners worldwide, and 
-                        we're just getting started. Our vision is to create a world where 
-                        anyone, anywhere can access the education they need to thrive.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div class="fade-in-up">
-                    <div class="text-3xl md:text-4xl font-bold text-gold mb-2">1000+</div>
-                    <div class="text-gray-600">Active Learners</div>
-                </div>
-                <div class="fade-in-up" style="animation-delay: 0.1s">
-                    <div class="text-3xl md:text-4xl font-bold text-gold mb-2">500+</div>
-                    <div class="text-gray-600">Training Resources</div>
-                </div>
-                <div class="fade-in-up" style="animation-delay: 0.2s">
-                    <div class="text-3xl md:text-4xl font-bold text-gold mb-2">50+</div>
-                    <div class="text-gray-600">Community Experts</div>
-                </div>
-                <div class="fade-in-up" style="animation-delay: 0.3s">
-                    <div class="text-3xl md:text-4xl font-bold text-gold mb-2">24/7</div>
-                    <div class="text-gray-600">Learning Access</div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 gold-gradient text-black">
-        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                Join Our Community Today
-            </h2>
-            <p class="text-xl text-gray-800 mb-8">
-                Be part of the movement to make education accessible for everyone.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="{{ route('blog.index') }}" class="inline-flex items-center px-8 py-4 bg-black text-gold font-bold rounded-lg hover:bg-gray-900 transform hover:scale-105 transition-all duration-300 border-2 border-black">
-                    Start Learning
-                </a>
-                <a href="{{ route('contact') }}" class="inline-flex items-center px-8 py-4 border-2 border-black text-black font-bold rounded-lg hover:bg-black hover:text-gold transform hover:scale-105 transition-all duration-300">
-                    Get Involved
-                </a>
+    <section class="py-16 md:py-24 bg-dark text-white w-full">
+        <div class="container mx-auto px-4 md:px-6 text-center">
+            <div class="space-y-4 max-w-[800px] mx-auto">
+                <span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium bg-highlight text-dark">
+                    Join Our Community
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold">Be Part of Our Story</h2>
+                <p class="text-lg text-gray-400">
+                    Whether you're a student, partner, or sponsor, there are many ways to get involved with Streetversity.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+                    <a href="{{ Route::has('apply') ? route('apply') : '#' }}" class="bg-primary text-dark hover:bg-highlight px-6 py-3 rounded-md text-sm font-medium transition-colors inline-block">
+                        Apply as a Student
+                    </a>
+                    <a href="{{ Route::has('sponsorship') ? route('sponsorship') : '#' }}" class="border border-gray-300 bg-transparent hover:bg-gray-800 px-6 py-3 rounded-md text-sm font-medium transition-colors inline-block">
+                        Become a Sponsor
+                    </a>
+                </div>
             </div>
         </div>
     </section>
+</div>
 @endsection
